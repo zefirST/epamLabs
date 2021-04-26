@@ -1,0 +1,15 @@
+package by.bsu.resource;
+import java.util.Locale;
+public class ResourceManagerRun {
+public static void main(String[ ] args) {
+ ResourceManager manager = ResourceManager.INSTANCE;
+ System.out.println(manager.getString("str1"));
+ manager.changeResource(new Locale("be","BY"));
+ System.out.println(manager.getString("str1"));
+}
+}
+Качественно разработанное приложение обычно не содержит литералов типа String.
+Все необходимые сообщения хранятся вне системы, в частности, в properties файлах.
+Что позволяет без перекомпиляции кода безболезненно изменять любое сообщение или информацию, хранящуюся вне классов системы.
++375(33)399-77-88
+str@mail.ru  cts@docker.com
